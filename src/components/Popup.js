@@ -26,7 +26,7 @@ const Popup = ({ toggle, project }) => {
     }
   };
   return (
-    <div className="popup-container flex h-screen w-screen items-center justify-center overflow-y-scroll bg-none">
+    <div className="popup-container flex h-screen w-screen items-center justify-center bg-none">
       <div className="popup">
         <IoClose
           onClick={() => toggle(false)}

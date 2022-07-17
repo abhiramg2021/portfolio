@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="App overflow-hidden">
+    <div className="App w-screen overflow-hidden">
       {displayProject(showToggle)}
       <Home />
       <About />

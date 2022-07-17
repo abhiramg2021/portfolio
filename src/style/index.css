@@ -78,12 +78,16 @@ section {
 
 /* PROJECTS */
 .project-pic {
-  width: 20em;
-  height: 20em;
+  width: 17em;
+  height: 17em;
   padding: 0.5rem;
   animation: project-breathe infinite 4s;
   animation-direction: alternate;
-  @apply object-cover;
+  @apply transition object-cover duration-300;
+}
+
+.project-pic:hover {
+  @apply cursor-pointer opacity-75;
 }
 
 .r0 {
