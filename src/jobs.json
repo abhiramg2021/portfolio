@@ -1,0 +1,12 @@
+{
+  "ACT Lab": {
+    "summary": "I worked on the Retrofitting Longitudinal Behavior of Autonomous Vehicles Sub-Team. I implemented an Extended Kalman Filter to estimate the parameters of a Car Following Model for a given trajectory. I also derived a Linear Model of the Non-Linear Intelligent Driver Model around equilibrium points to reduce the complexity of controlling a non-linear model.",
+    "duration": "January 2022 - April 2022",
+    "position": "Undergraduate Researcher"
+  },
+  "Parata Systems": {
+    "summary": "I worked on the Parata Perl team. The machine can take large spools of packaged pills, and then cut and roll them up into smaller packages, while also intelligently verifying the contents of each pouch using contour detection. I compiled 6 weeks worth of test data and interpreted it using tools such as correlation matrices and pivot tables using Excel. Then, I was able to provide valuable insights on the most common errors and their causes. Acting on my findings, I designed an add-on kit for the Parata Perl that controlled the rate at which medicine spools unwind into the machine to address our most common errors.",
+    "duration": "June 2021 - August 2021",
+    "position": "Automation Engineering Intern"
+  }
+}

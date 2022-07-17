@@ -1,0 +1,21 @@
+/* Color Scheme */
+.root,
+#root,
+#docs-root {
+  --beige-800: #ead2a8;
+  --beige-600: #efddbd;
+  --beige-400: #f3e5ce;
+  --beige-200: #fbf6ef;
+  --black: #3b3b3b;
+  --white: #ffffff;
+  --pink: #ea638c;
+  --none: #0000009d;
+  --gray: #6c6c6c;
+
+  --xl: 8em;
+  --l: 4em;
+  --m: 2.5em;
+  --ms: 2em;
+  --s: 1.5em;
+  --xs: 1em;
+}
