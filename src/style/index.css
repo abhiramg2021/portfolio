@@ -15,11 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* 
-.gif {
-  width: 20em;
-  height: 20em;
-} */
+
 section {
   @apply relative min-h-screen;
 }
@@ -30,6 +26,14 @@ h2 {
 
 p {
   @apply pb-5;
+}
+
+a {
+  @apply transition font-bold duration-500;
+}
+
+a:hover {
+  @apply rounded-sm bg-highlight px-1 text-white;
 }
 
 .tag {

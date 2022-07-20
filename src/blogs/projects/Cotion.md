@@ -1,3 +1,26 @@
+# Project: Cotion
+
+# Colors: #EAD2A8, #3B3B3B, #EA628C
+
+# Tags: react.js, tailwind-css, flask
+
+# Github: https://github.com/Cotion-App/frontend
+
+# Deployment: https://cotion.herokuapp.com
+
+# GIF: ![GIF](../../../public/GIFS/Cotion.gif)
+
+# Description
+
+I originally sought out to find a website that could automate the process of
+uploading my Canvas Assignments to Notion, and I stumbled upon
+[Edutools for Notion](https://edutools.srg.id.au/guide/assignments-to-db/index.html).
+Unfortunately, no matter how long I tinkered with the website, it did not seem
+to work for me. So using this website as an inspiration, I put together my own
+Canvas To Notion workflow called Cotion.
+
+#####
+
 ## Goals
 
 Although some professors release all of their course schedules at the start of

@@ -26,17 +26,15 @@ function App() {
 
   return (
     <div className="App w-screen overflow-hidden">
-      {/* {displayProject(showToggle)} */}
-      {/* <Home />
+      {displayProject(showToggle)}
+      <Home />
       <About />
       <Projects
         setShowToggle={setShowToggle}
         setScrollY={setScrollY}
         setProject={setProject}
       />
-      <Contact /> */}
-
-      <ProjectPage />
+      <Contact />
     </div>
   );
 }
