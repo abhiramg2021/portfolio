@@ -2,7 +2,9 @@ import { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
+import Md from "./components/Md";
 import Popup from "./components/Popup";
+import { ProjectPage } from "./components/ProjectPage";
 import Projects from "./components/Projects";
 
 function App() {
@@ -24,15 +26,17 @@ function App() {
 
   return (
     <div className="App w-screen overflow-hidden">
-      {displayProject(showToggle)}
-      <Home />
+      {/* {displayProject(showToggle)} */}
+      {/* <Home />
       <About />
       <Projects
         setShowToggle={setShowToggle}
         setScrollY={setScrollY}
         setProject={setProject}
       />
-      <Contact />
+      <Contact /> */}
+
+      <ProjectPage />
     </div>
   );
 }

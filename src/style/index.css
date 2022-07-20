@@ -15,9 +15,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 
+.gif {
+  width: 20em;
+  height: 20em;
+} */
 section {
   @apply relative min-h-screen;
+}
+
+h2 {
+  @apply pb-2 text-s font-bold text-black;
+}
+
+p {
+  @apply pb-5;
+}
+
+.tag {
+  @apply rounded-md bg-black px-2 text-white;
 }
 
 .title {
@@ -81,33 +97,13 @@ section {
   width: 17em;
   height: 17em;
   padding: 0.5rem;
-  animation: project-breathe infinite 4s;
-  animation-direction: alternate;
+  border-radius: 2em;
   @apply transition object-cover duration-300;
 }
 
 .project-pic:hover {
   @apply cursor-pointer opacity-75;
 }
-
-.r0 {
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-.r1 {
-  border-radius: 72% 28% 81% 19% / 25% 59% 41% 75%;
-}
-
-.r2 {
-  border-radius: 40% 60% 60% 40% / 38% 49% 51% 62%;
-}
-
-@keyframes project-breathe {
-  to {
-    border-radius: 2em;
-  }
-}
-
 /* POPUP */
 
 .popup-container {

@@ -8,8 +8,11 @@ const Resume = () => {
     <div className="Resume mx-10 max-w-screen-md lg:mx-20 lg:max-w-screen-lg">
       <div className="content p-2">
         <div className="subtitle pt-10">More of my credentials</div>
+        <div className="text-s">
+          Click on a circle to learn more about my work.
+        </div>
 
-        <div className="positions flex flex-col justify-center space-y-8 pt-10">
+        <div className="positions flex flex-col items-start justify-center space-y-8 pt-10">
           {companies.map((company, i) => (
             <Position
               company={company}
