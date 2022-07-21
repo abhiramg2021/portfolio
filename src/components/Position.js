@@ -10,7 +10,7 @@ const Position = ({ dontShow, company, position, date }) => {
       <div className="position-graphics">
         <div
           className="position-circle transition mt-2 cursor-pointer rounded-full bg-black duration-300 hover:bg-highlight"
-          onClick={() => navigate(`/${company}`)}
+          onClick={() => navigate(`/${company.replace(" ", "")}`)}
         />
         {showLine()}
       </div>

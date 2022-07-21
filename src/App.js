@@ -14,7 +14,7 @@ function App() {
     return blogs.map((project) => {
       return (
         <Route
-          path={`/${project}`}
+          path={`/${project.replace(" ", "")}`}
           element={<MarkdownProject project={project} />}
         />
       );
@@ -25,7 +25,10 @@ function App() {
     const blogs = Object.keys(jobs);
     return blogs.map((job) => {
       return (
-        <Route path={`/${job}`} element={<MarkdownPosition position={job} />} />
+        <Route
+          path={`/${job.replace(" ", "")}`}
+          element={<MarkdownPosition position={job} />}
+        />
       );
     });
   };

@@ -23,7 +23,7 @@ const Projects = () => {
                 src={projects[project]}
                 alt=""
                 class={`project-pic`}
-                onClick={() => navigate(`/${project}`)}
+                onClick={() => navigate(`/${project.replace(" ", "")}`)}
               />
             );
           })}
