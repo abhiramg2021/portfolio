@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
 import { MarkdownProject } from "./pages/MarkdownProject";
 import { MarkdownPosition } from "./pages/MarkdownPosition";
+import { Error } from "./pages/Error";
 const projects = require("./projects.json");
 const jobs = require("./jobs.json");
 
@@ -49,6 +50,7 @@ function App() {
         />
         {renderProjectBlogs()}
         {renderJobBlogs()}
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
