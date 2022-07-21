@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FiGithub, FiHome, FiLink } from "react-icons/fi";
+import { FiHome } from "react-icons/fi";
 import ReactMarkdown from "react-markdown";
 import { useNavigate } from "react-router-dom";
 export const MarkdownPosition = ({ position }) => {
@@ -24,8 +24,8 @@ export const MarkdownPosition = ({ position }) => {
   const createDynamic = (text) => {
     let obj = {};
 
-    let titleTemplate = "# Position:";
-    let whenTemplate = "# When:";
+    let title = "# Position:";
+    let when = "# When:";
 
     const extractUsingTemplate = (template) => {
       let out = "";
@@ -40,8 +40,8 @@ export const MarkdownPosition = ({ position }) => {
       return out;
     };
 
-    obj["title"] = extractUsingTemplate(titleTemplate);
-    obj["when"] = extractUsingTemplate(whenTemplate).split(", ");
+    obj["title"] = extractUsingTemplate(title);
+    obj["when"] = extractUsingTemplate(when).split(", ");
     obj["when"] = obj["when"].map((tag) => <div className="tag">{tag}</div>);
 
     text = <ReactMarkdown>{text}</ReactMarkdown>;

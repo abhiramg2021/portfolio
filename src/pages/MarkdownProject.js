@@ -8,6 +8,8 @@ export const MarkdownProject = ({ project }) => {
 
   const navigate = useNavigate();
 
+  const iconCSS = "cursor-pointer text-black hover:text-highlight";
+
   useEffect(() => {
     import(`../blogs/projects/${project}.md`)
       .then((res) => {
@@ -24,12 +26,12 @@ export const MarkdownProject = ({ project }) => {
   const createDynamic = (text) => {
     let obj = {};
 
-    let titleTemplate = "# Project:";
-    let colorsTemplate = "# Colors:";
-    let tagsTemplate = "# Tags:";
-    let gitTemplate = "# Github:";
-    let deplTemplate = "# Deployment:";
-    let GIFTemplate = "# GIF:";
+    let title = "# Project:";
+    let colors = "# Colors:";
+    let tags = "# Tags:";
+    let git = "# Github:";
+    let deployment = "# Deployment:";
+    let gif = "# GIF:";
 
     const extractUsingTemplate = (template) => {
       let out = "";
@@ -44,51 +46,48 @@ export const MarkdownProject = ({ project }) => {
       return out;
     };
 
-    obj["title"] = extractUsingTemplate(titleTemplate);
+    obj["title"] = extractUsingTemplate(title);
 
-    if (obj["title"] > 0) {
-    }
-
-    obj["colors"] = extractUsingTemplate(colorsTemplate).split(", ");
+    obj["colors"] = extractUsingTemplate(colors).split(", ");
 
     let lastIndex = obj["colors"].length - 1;
 
     obj["colors"] = obj["colors"].map((color, i) => {
-      let colorscss = "w-full ";
+      let colorsCSS = "w-full ";
       if (i === 0) {
-        colorscss += "rounded-l-lg ";
+        colorsCSS += "rounded-l-lg ";
       }
       if (i === lastIndex) {
-        colorscss += "rounded-r-lg ";
+        colorsCSS += "rounded-r-lg ";
       }
-      return <div className={colorscss} style={{ backgroundColor: color }} />;
+      return <div className={colorsCSS} style={{ backgroundColor: color }} />;
     });
 
-    obj["tags"] = extractUsingTemplate(tagsTemplate).split(", ");
+    obj["tags"] = extractUsingTemplate(tags).split(", ");
     obj["tags"] = obj["tags"].map((tag) => <div className="tag">{tag}</div>);
-    obj["git"] = extractUsingTemplate(gitTemplate);
+    obj["git"] = extractUsingTemplate(git);
 
     if (obj["git"].length > 0) {
       obj["git"] = (
         <FiGithub
-          className="cursor-pointer text-black hover:text-highlight"
+          className={iconCSS}
           onClick={() => window.open(obj["git"], "_blank")}
         />
       );
     }
 
-    obj["deployment"] = extractUsingTemplate(deplTemplate);
+    obj["deployment"] = extractUsingTemplate(deployment);
 
     if (obj["deployment"].length > 0) {
       obj["deployment"] = (
         <FiLink
-          className="cursor-pointer text-black hover:text-highlight"
+          className={iconCSS}
           onClick={() => window.open(obj["deployment"], "_blank")}
         />
       );
     }
 
-    let gifLink = extractUsingTemplate(GIFTemplate);
+    let gifLink = extractUsingTemplate(gif);
 
     gifLink = gifLink.slice(gifLink.indexOf("/GIFS"), -1);
     obj["gif"] = gifLink;
@@ -107,9 +106,6 @@ export const MarkdownProject = ({ project }) => {
     return obj;
   };
 
-  // Home Linking, css
-  // Write a Page for Static Markdown Render
-
   return (
     <div className=" mx-auto flex min-h-screen max-w-3xl flex-col items-baseline p-5">
       <div className="header flex w-full flex-col rounded-lg bg-beige-800 p-5 md:space-y-0">
@@ -120,10 +116,7 @@ export const MarkdownProject = ({ project }) => {
           <div className="header_right flex items-center space-x-2 text-s">
             {dynamic["deployment"]}
             {dynamic["git"]}
-            <FiHome
-              className="cursor-pointer text-black hover:text-highlight"
-              onClick={() => navigate("/")}
-            />
+            <FiHome className={iconCSS} onClick={() => navigate("/")} />
           </div>
         </div>
         <div className="tags h-7 flex space-x-2">{dynamic["tags"]}</div>
