@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 @import "./constants.css";
+@import "./landing-animation.css";
+@import "./pages.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* GENERAL */
 
 body {
   margin: 0;
@@ -59,84 +59,6 @@ a:hover {
   @apply absolute;
 }
 
-/* Home */
-.icon-btn {
-  @apply transition cursor-pointer rounded-full bg-black p-3 text-s text-white duration-300;
-}
-
-.icon-btn:hover {
-  @apply bg-highlight;
-}
-
-/* ABOUT */
-
-.profile-pic {
-  max-width: 20rem;
-  max-height: 20rem;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  animation: profile-breathe infinite 4s;
-  animation-direction: alternate;
-}
-
-@keyframes profile-breathe {
-  100% {
-    border-radius: 77% 23% 65% 35% / 20% 63% 37% 80%;
-  }
-}
-
-.skill {
-  @apply text-l text-black;
-}
-
-.profile-button {
-  @apply whitespace-no-wrap transition my-auto w-40 cursor-pointer rounded-md bg-black py-2 px-5 text-center text-s font-bold text-white duration-300;
-}
-
-.profile-button:hover {
-  @apply bg-highlight;
-}
-
-/* PROJECTS */
-.project-pic {
-  width: 17em;
-  height: 17em;
-  padding: 0.5rem;
-  border-radius: 2em;
-  @apply transition object-cover duration-300;
-}
-
-.project-pic:hover {
-  @apply cursor-pointer opacity-75;
-}
-
-/* RESUME */
-.position-circle {
-  width: 2em;
-  height: 2em;
-}
-
-.position-edge {
-  width: 0.125em;
-  min-height: 100%;
-}
-
-/* CONTACT */
-
-.contact-icon {
-  font-size: var(--s);
-  @apply mx-auto;
-}
-
-.contact {
-  @apply transition flex w-1/3 flex-col items-center justify-center text-s text-white duration-300;
-}
-
-.contact:hover {
-  @apply cursor-pointer text-highlight;
-}
-
-/* RESPONSIVE DESIGN */
-
 @media only screen and (max-width: 900px) {
   .wave {
     width: 900px;
@@ -149,97 +71,5 @@ a:hover {
   }
   #ghanta {
     width: 280px;
-  }
-}
-
-/* Landing Animation */
-
-#home-waves path {
-  opacity: 0;
-  animation: land 0.5s ease-in forwards;
-  animation-delay: calc(var(--order) * 200ms);
-}
-
-#Home {
-  @apply bg-white;
-  animation: fade-bg 0.5s ease-in forwards;
-  animation-delay: 800ms;
-  --delay: 1.25s;
-}
-
-@keyframes fade-bg {
-  100% {
-    @apply bg-beige-800;
-  }
-}
-
-@keyframes land {
-  100% {
-    opacity: 1;
-  }
-}
-
-#layer-1 {
-  --order: 1;
-}
-
-#layer-2 {
-  --order: 2;
-}
-
-#layer-3 {
-  --order: 3;
-}
-
-#layer-4 {
-  --order: 4;
-}
-
-#layer_5 {
-  --order: 5;
-}
-
-/* Name Animation */
-.letters {
-  animation-fill-mode: forwards;
-  stroke-opacity: 0;
-  stroke: var(--black);
-}
-
-#letter-i {
-  animation: fade 0.7s;
-  animation-fill-mode: forwards;
-  animation-delay: calc(var(--delay) + 0.5s);
-}
-
-@keyframes fade {
-  to {
-    stroke-opacity: 1;
-  }
-}
-
-@keyframes sign {
-  1% {
-    stroke-opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-}
-
-/* rest animation */
-.home-rest {
-  opacity: 0;
-  transform: translateY(20%);
-  animation: fade-in ease 2s;
-  animation-delay: calc(var(--delay) + 1s);
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-in {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

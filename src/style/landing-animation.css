@@ -1,0 +1,90 @@
+/* Waves */
+#home-waves path {
+  opacity: 0;
+  animation: land 0.5s ease-in forwards;
+  animation-delay: calc(var(--order) * 200ms);
+}
+
+#Home {
+  @apply bg-white;
+  animation: fade-bg 0.5s ease-in forwards;
+  animation-delay: 800ms;
+  --delay: 1.25s;
+}
+
+@keyframes fade-bg {
+  100% {
+    @apply bg-beige-800;
+  }
+}
+
+@keyframes land {
+  100% {
+    opacity: 1;
+  }
+}
+
+#layer-1 {
+  --order: 1;
+}
+
+#layer-2 {
+  --order: 2;
+}
+
+#layer-3 {
+  --order: 3;
+}
+
+#layer-4 {
+  --order: 4;
+}
+
+#layer_5 {
+  --order: 5;
+}
+
+/* Signature */
+.letters {
+  animation-fill-mode: forwards;
+  stroke-opacity: 0;
+  stroke: var(--black);
+}
+
+#letter-i {
+  animation: fade 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: calc(var(--delay) + 0.5s);
+}
+
+@keyframes fade {
+  to {
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes sign {
+  1% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}
+
+/* Rest of the Elements */
+.home-rest {
+  opacity: 0;
+  transform: translateY(20%);
+  animation: fade-in ease 2s;
+  animation-delay: calc(var(--delay) + 1s);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

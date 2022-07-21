@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import "../style/index.css";
 import { openLink } from "../Constants";
 import Signature from "../components/SVGs/Signature";
 import { HomeSVG } from "../components/SVGs/HomeSVG";
