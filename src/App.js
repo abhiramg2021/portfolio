@@ -1,20 +1,55 @@
-import { useState } from "react";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import { Route, Routes } from "react-router-dom";
+import { MarkdownProject } from "./pages/MarkdownProject";
+import { MarkdownPosition } from "./pages/MarkdownPosition";
+const projects = require("./projects.json");
+const jobs = require("./jobs.json");
 
 function App() {
-  // const [showToggle, setShowToggle] = useState(false);
-  // const [scrollY, setScrollY] = useState(0);
-  // const [project, setProject] = useState("");
+  const renderProjectBlogs = () => {
+    const blogs = Object.keys(projects);
+    return blogs.map((project) => {
+      return (
+        <Route
+          path={`/blog/${project}`}
+          element={<MarkdownProject project={project} />}
+        />
+      );
+    });
+  };
+
+  const renderJobBlogs = () => {
+    const blogs = Object.keys(jobs);
+    return blogs.map((job) => {
+      return (
+        <Route
+          path={`/blog/${job}`}
+          element={<MarkdownPosition position={job} />}
+        />
+      );
+    });
+  };
 
   return (
     <div className="App w-screen overflow-hidden">
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <Home />
+              <About />
+              <Projects />
+              <Contact />
+            </div>
+          }
+        />
+        {renderProjectBlogs()}
+        {renderJobBlogs()}
+      </Routes>
     </div>
   );
 }

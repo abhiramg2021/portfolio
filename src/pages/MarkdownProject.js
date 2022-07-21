@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { FiGithub, FiHome, FiLink } from "react-icons/fi";
 import ReactMarkdown from "react-markdown";
-export const ProjectPage = () => {
+import { useNavigate } from "react-router-dom";
+export const MarkdownProject = ({ project }) => {
   const [post, setPost] = useState("");
   const [dynamic, setDynamic] = useState({});
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    import("../blogs/projects/Cotion.md")
+    import(`../blogs/projects/${project}.md`)
       .then((res) => {
         fetch(res.default)
           .then((res) => res.text())
@@ -117,7 +120,10 @@ export const ProjectPage = () => {
           <div className="header_right flex items-center space-x-2 text-s">
             {dynamic["deployment"]}
             {dynamic["git"]}
-            <FiHome />
+            <FiHome
+              className="cursor-pointer text-black hover:text-highlight"
+              onClick={() => navigate("/")}
+            />
           </div>
         </div>
         <div className="tags h-7 flex space-x-2">{dynamic["tags"]}</div>

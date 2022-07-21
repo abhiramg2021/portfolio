@@ -1,11 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 const Position = ({ dontShow, company, position, date }) => {
+  const navigate = useNavigate();
   const showLine = () => {
     if (!dontShow) return <div className="position-edge mx-auto bg-black" />;
   };
   return (
     <div className="position flex justify-center space-x-3">
       <div className="position-graphics">
-        <div className="position-circle mt-2 rounded-full bg-black" />
+        <div
+          className="position-circle transition mt-2 cursor-pointer rounded-full bg-black duration-300 hover:bg-highlight"
+          onClick={() => navigate(`/blog/${company}`)}
+        />
         {showLine()}
       </div>
       <div className="position-detail">
