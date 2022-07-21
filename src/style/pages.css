@@ -73,3 +73,8 @@
 .contact:hover {
   @apply cursor-pointer text-highlight;
 }
+
+.Markdown img {
+  max-height: 20em;
+  @apply mx-auto rounded-3xl;
+}

@@ -13,6 +13,8 @@ wanted Cotion to only add new assignments. For any existing assignments in the
 database, Cotion would check to see if there was a change in due date, and
 update as necessary.
 
+![](../../../public/Images/profile.png)
+
 ## Future Features
 
 In Notion, I find myself categorizing my assignments by type (ie. HW, Tests,

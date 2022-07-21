@@ -107,7 +107,7 @@ export const MarkdownProject = ({ project }) => {
   };
 
   return (
-    <div className=" mx-auto flex min-h-screen max-w-3xl flex-col items-baseline p-5">
+    <div className="MarkdownProject mx-auto flex min-h-screen max-w-3xl flex-col items-baseline p-5">
       <div className="header flex w-full flex-col rounded-lg bg-beige-800 p-5 md:space-y-0">
         <div className="header_top flex w-full justify-between">
           <div className="project_name text-s font-bold">
