@@ -17,7 +17,7 @@ sometimes. So, I made a set of tools that makes 3D Modeling a lot faster.
 
 #####
 
-## How I came about starting this project
+## How I started this project
 
 In high school, I discovered my passion for Competitive Robotics, here is my
 team [FRC 5190](https://www.ghrobotics.org), where over the next 4 years, I
@@ -28,9 +28,9 @@ write our own features into the program using the
 language designed by the folks over at Onshape for building and working with 3D
 parametric models. The syntax of this language resembles that of Javascript.
 
-## Here are some of my notable creations
+## Some of my notable creations
 
-_Click on each subtitle to see the source code for each custom feature._
+Click on each subtitle to see the source code for each custom feature
 
 ### [Drivetrain Generator](https://cad.onshape.com/documents/96d32fd4fe5341563a402ecd/v/67d9e6b8eabf48e030f6ffff/e/1d3de11ced3d680525700399)
 
@@ -56,3 +56,8 @@ materials of each part in CAD. Some of the materials used by FRC designers are
 not avaliable by default in Onshape, so the Set Materials feature brings these
 materials into Onshape. As a bonus, you can also set the appearance of each
 material so you can visualize what your model would look like in real life.
+
+Below you can see the use of Set Materials to clean up a mechanism model.
+
+![Climber Before](../../../public/Images/Climber-Before.png)
+![Climber After](../../../public/Images/Climber-After.png)

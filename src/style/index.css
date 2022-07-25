@@ -32,13 +32,13 @@ p {
   @apply pb-5;
 }
 
-/* a {
-  @apply transition font-bold duration-500;
-} */
+a {
+  @apply transition italic duration-500;
+}
 
-/* a:hover {
-  @apply rounded-sm bg-highlight px-1 text-white;
-} */
+a:hover {
+  @apply text-highlight;
+}
 
 .tag {
   @apply rounded-md bg-black px-2 text-white;
