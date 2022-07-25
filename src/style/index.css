@@ -24,17 +24,21 @@ h2 {
   @apply pb-2 text-s font-bold text-black;
 }
 
+h3 {
+  @apply text-s font-bold text-gray;
+}
+
 p {
   @apply pb-5;
 }
 
-a {
+/* a {
   @apply transition font-bold duration-500;
-}
+} */
 
-a:hover {
+/* a:hover {
   @apply rounded-sm bg-highlight px-1 text-white;
-}
+} */
 
 .tag {
   @apply rounded-md bg-black px-2 text-white;

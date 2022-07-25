@@ -1,14 +1,14 @@
-# Project: Coursify
+# Title: Coursify
 
-# Colors: #E0B53E
+# Colors:
 
 # Tags: next.js, twilio, flask, firebase
 
-# Github: ![GIF](../../../public/GIFS/Coursify.gif)
+# Github:
 
 # Deployment: http://run-coursify.herokuapp.com
 
-# GIF:
+# GIF: ![GIF](../../../public/GIFS/Coursify.gif)
 
 # Description
 
