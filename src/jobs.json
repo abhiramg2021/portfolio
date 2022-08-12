@@ -1,4 +1,8 @@
 {
+  "Datascan": {
+    "duration": "June 2022 - August 2022",
+    "position": "Backend Developer Intern"
+  },
   "ACT Lab": {
     "duration": "January 2022 - April 2022",
     "position": "Undergraduate Researcher"
@@ -6,9 +10,5 @@
   "Parata Systems": {
     "duration": "June 2021 - August 2021",
     "position": "Automation Engineering Intern"
-  },
-  "Datascan": {
-    "duration": "June 2022 - August 2022",
-    "position": "Backend Developer Intern"
   }
 }
