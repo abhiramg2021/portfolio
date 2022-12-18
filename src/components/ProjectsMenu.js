@@ -10,8 +10,15 @@ export const ProjectsMenu = (props) => {
         <FiChevronsRight
           className="chevrons icon hover:translate-x-1"
           onClick={() => {
-            props.setMenuToggle(false);
-            props.setMenuItemIndex(-1);
+            const element = document.getElementById("menu");
+            element.classList.remove("anim");
+            void element.offsetWidth; // forces browser to redraw
+            element.classList.add("anim");
+
+            setTimeout(() => {
+              props.setMenuToggle(false);
+              props.setMenuItemIndex(-1);
+            }, 300);
           }}
         />
       </div>

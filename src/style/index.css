@@ -61,3 +61,26 @@
   content: "";
   @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100 bg-red-400 duration-500;
 }
+
+.anim {
+  @apply relative;
+}
+
+.anim::after {
+  content: "";
+  animation-name: swap-forward;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: forwards;
+  @apply bg-gray-50 absolute top-0 h-full w-full origin-bottom-left scale-x-0;
+}
+
+@keyframes swap-forward {
+  25% {
+    @apply scale-x-100;
+  }
+  75% {
+    @apply scale-x-100;
+  }
+}

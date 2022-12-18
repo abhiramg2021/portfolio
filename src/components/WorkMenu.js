@@ -5,12 +5,18 @@ import { jobs } from "../data/data";
 export const WorkMenu = (props) => {
   return (
     <div>
-      <div className="flex items-center justify-end space-x-5">
+      <div className="flex items-center space-x-5">
         <FiChevronsLeft
           className="chevrons hover:-translate-x-1"
           onClick={() => {
-            props.setMenuToggle(true);
-            props.setMenuItemIndex(-1);
+            const element = document.getElementById("menu");
+            element.classList.remove("anim");
+            void element.offsetWidth; // forces browser to redraw
+            element.classList.add("anim");
+            setTimeout(() => {
+              props.setMenuToggle(true);
+              props.setMenuItemIndex(-1);
+            }, 300);
           }}
         />
         <h2 className="text-3xl font-bold">Experience</h2>
