@@ -77,3 +77,23 @@ a:hover {
     width: 280px;
   }
 }
+
+.borderLeft {
+  border-left: 20px solid;
+  bottom: 75%;
+}
+
+.borderTop {
+  border-top: 20px solid;
+  right: 85%;
+}
+
+.borderRight {
+  border-right: 20px solid;
+  top: 75%;
+}
+
+.borderBottom {
+  border-bottom: 20px solid;
+  left: 85%;
+}
