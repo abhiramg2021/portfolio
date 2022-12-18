@@ -1,7 +1,7 @@
 export const Landing = () => {
   return (
     <div>
-      <h1 className=" font-yellowtail text-xl">Hello</h1>
+      <h1 className="text-7xl font-bold">Hello</h1>
 
       <div className="m-0 border-l-8 pl-5">
         <p>

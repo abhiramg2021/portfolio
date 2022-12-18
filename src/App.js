@@ -9,7 +9,7 @@ function App() {
   const [showProjects, showProjectsToggle] = useState(true);
 
   return (
-    <div className="relative h-screen w-screen overflow-x-hidden bg-beige-200">
+    <div className="bg-gray-50 relative h-screen w-screen overflow-x-hidden">
       {/* <div className="borderLeft absolute top-0" />
       <div className="borderTop absolute left-0" />
       <div className="borderRight absolute bottom-0 right-0" />

@@ -5,9 +5,9 @@ export const ProjectsMenu = (props) => {
   return (
     <div>
       <div className="flex items-center space-x-5">
-        <h2 className="text-m">Projects</h2>
+        <h2 className="text-3xl font-bold">Projects</h2>
         <FiChevronsRight
-          className="text-m"
+          className="text-4xl"
           onClick={() => props.toggle(false)}
         />
       </div>

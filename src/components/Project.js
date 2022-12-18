@@ -3,7 +3,7 @@ import { Link } from "./Link";
 export const Project = () => {
   return (
     <div className="p-10">
-      <h1 className=" font-yellowtail text-l">Cotion</h1>
+      <h1 className="text-2xl">Cotion</h1>
 
       <div className="m-0 w-1/2 border-l-8 pl-5">
         <p>

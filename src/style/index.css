@@ -1,82 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-@import "./constants.css";
-@import "./landing-animation.css";
-@import "./pages.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-section {
-  @apply relative min-h-screen;
-}
-
-h2 {
-  @apply pb-2 text-s font-bold text-black;
-}
-
-h3 {
-  @apply text-s font-bold text-gray;
-}
-
-p {
-  @apply pb-5;
-}
-
-a {
-  @apply transition italic duration-500;
-}
-
-a:hover {
-  @apply text-highlight;
-}
-
-.tag {
-  @apply rounded-md bg-black px-2 text-white;
-}
-
-.title {
-  @apply pt-5 text-center font-yellowtail text-m leading-none text-black;
-}
-
-.subtitle {
-  @apply text-center text-m font-bold leading-none text-black;
-}
-
-.content {
-  @apply relative z-10 flex flex-col items-center;
-}
-
-.wave {
-  @apply absolute;
-}
-.waves {
-  @apply absolute;
-}
-
-@media only screen and (max-width: 900px) {
-  .wave {
-    width: 900px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #abhiram {
-    width: 300px;
-  }
-  #ghanta {
-    width: 280px;
-  }
-}
 
 .borderLeft {
   border-left: 20px solid;
@@ -96,4 +22,8 @@ a:hover {
 .borderBottom {
   border-bottom: 20px solid;
   left: 85%;
+}
+
+.icon {
+  @apply text-xl;
 }
