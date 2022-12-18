@@ -1,11 +1,12 @@
 import { Landing } from "./components/Landing";
-import { Projects } from "./components/Projects";
+import { Project } from "./components/Project";
+import { ProjectsMenu } from "./components/ProjectsMenu";
 
 function App() {
   return (
     <div className=" flex h-screen w-screen items-center bg-beige-200">
-      <Landing />
-      <Projects />
+      <Project />
+      <ProjectsMenu />
     </div>
   );
 }
