@@ -39,3 +39,25 @@
 .large-icon {
   @apply icon text-4xl;
 }
+
+.wipe-underline-animation {
+  @apply relative;
+}
+
+.wipe-underline-animation::after {
+  content: "";
+  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-0 bg-red-400 duration-500;
+}
+
+.wipe-underline-animation:hover::after {
+  @apply origin-bottom-left scale-x-100;
+}
+
+.wipe-underline-highlight {
+  @apply relative;
+}
+
+.wipe-underline-highlight::after {
+  content: "";
+  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100 bg-red-400 duration-500;
+}
