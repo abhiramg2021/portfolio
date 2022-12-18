@@ -3,7 +3,7 @@ import { FiChevronsRight } from "react-icons/fi";
 
 export const ProjectsMenu = () => {
   return (
-    <div className="">
+    <div>
       <div className="flex items-center space-x-5">
         <h2 className="text-m">Projects</h2>
         <FiChevronsRight className="text-m" />

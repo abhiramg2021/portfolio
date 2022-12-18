@@ -1,6 +1,7 @@
 import { InfoIcons } from "./components/InfoIcons";
 import { Landing } from "./components/Landing";
 import { ProjectsMenu } from "./components/ProjectsMenu";
+import { WorkMenu } from "./components/WorkMenu";
 import "./style/index.css";
 
 function App() {
