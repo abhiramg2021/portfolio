@@ -25,5 +25,17 @@
 }
 
 .icon {
-  @apply text-xl;
+  @apply transition cursor-pointer hover:scale-125 hover:text-red-700;
+}
+
+.small-icon {
+  @apply icon text-xl;
+}
+
+.chevrons {
+  @apply icon transition cursor-pointer text-4xl ease-in-out hover:scale-105;
+}
+
+.large-icon {
+  @apply icon text-4xl;
 }

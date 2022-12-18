@@ -5,12 +5,12 @@ export const InfoIcons = () => {
   return (
     <div className="flex w-full flex-row-reverse items-center justify-between">
       <div className="flex space-x-5">
-        <FiMail className="icon" />
-        <FiGithub className="icon" />
-        <FiFileText className="icon" />
+        <FiMail className=" small-icon" />
+        <FiGithub className="small-icon" />
+        <FiFileText className="small-icon" />
       </div>
 
-      <FiHome className="text-4xl" />
+      <FiHome className="large-icon" />
       {/* replace later with something more cool */}
     </div>
   );

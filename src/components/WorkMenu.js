@@ -6,7 +6,7 @@ export const WorkMenu = (props) => {
     <div>
       <div className="flex items-center justify-end space-x-5">
         <FiChevronsLeft
-          className="text-4xl"
+          className="chevrons hover:-translate-x-1"
           onClick={() => props.toggle(true)}
         />
         <h2 className="text-3xl font-bold">Experience</h2>
