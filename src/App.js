@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { InfoIcons } from "./components/InfoIcons";
 import { Landing } from "./components/Landing";
 import { ProjectsMenu } from "./components/ProjectsMenu";
@@ -5,6 +6,8 @@ import { WorkMenu } from "./components/WorkMenu";
 import "./style/index.css";
 
 function App() {
+  const [showProjects, showProjectsToggle] = useState(true);
+
   return (
     <div className="relative h-screen w-screen overflow-x-hidden bg-beige-200">
       {/* <div className="borderLeft absolute top-0" />
@@ -18,7 +21,11 @@ function App() {
             <Landing />
           </div>
           <div className="w-full lg:w-auto">
-            <ProjectsMenu />
+            {showProjects ? (
+              <ProjectsMenu toggle={showProjectsToggle} />
+            ) : (
+              <WorkMenu toggle={showProjectsToggle} />
+            )}
           </div>
         </div>
       </div>

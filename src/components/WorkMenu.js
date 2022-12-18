@@ -1,11 +1,11 @@
 import { FiChevronsLeft } from "react-icons/fi";
 import { MenuItem } from "./MenuItem";
 
-export const WorkMenu = () => {
+export const WorkMenu = (props) => {
   return (
     <div>
       <div className="flex items-center justify-end space-x-5">
-        <FiChevronsLeft className="text-m" />
+        <FiChevronsLeft className="text-m" onClick={() => props.toggle(true)} />
         <h2 className="text-m">Experience</h2>
       </div>
 
