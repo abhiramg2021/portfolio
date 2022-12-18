@@ -2,7 +2,7 @@ import { MenuItem } from "./MenuItem";
 
 export const ProjectsMenu = () => {
   return (
-    <div className="w-full">
+    <div className="">
       <div className="flex items-center space-x-5">
         <h2 className="text-m">Projects</h2>
         <div className="h-8 w-8 cursor-pointer rounded-lg bg-black hover:bg-beige-200"></div>
