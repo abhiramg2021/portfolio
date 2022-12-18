@@ -1,10 +1,11 @@
 import { Link } from "./Link";
-import { projects } from "../data/data";
-export const Project = (props) => {
-  const project = projects[props.menuItemIndex];
+import { jobs } from "../data/data";
+export const Job = (props) => {
+  console.log(props.menuItemIndex);
+  const job = jobs[props.menuItemIndex];
   return (
     <div className="p-10">
-      <h1 className="text-5xl font-bold">{project.title}</h1>
+      <h1 className="text-5xl font-bold">{job.company}</h1>
 
       <div className="m-0 border-l-8 pl-5">
         <p>

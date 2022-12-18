@@ -1,6 +1,7 @@
 import { MenuItem } from "./MenuItem";
 import { FiChevronsRight } from "react-icons/fi";
 import "../style/index.css";
+import { projects } from "../data/data";
 export const ProjectsMenu = (props) => {
   return (
     <div>
@@ -8,14 +9,23 @@ export const ProjectsMenu = (props) => {
         <h2 className="text-3xl font-bold">Projects</h2>
         <FiChevronsRight
           className="chevrons icon hover:translate-x-1"
-          onClick={() => props.toggle(false)}
+          onClick={() => {
+            props.setMenuToggle(false);
+            props.setMenuItemIndex(-1);
+          }}
         />
       </div>
 
       <div className="flex flex-col space-y-3 border-l-8 p-5">
-        <MenuItem text={"Cotion"} />
-        <MenuItem text={"Coursify"} />
-        <MenuItem text={"Abhi's Features"} />
+        {projects.map((entry, id) => (
+          <MenuItem
+            key={id}
+            id={id}
+            text={entry.title}
+            menuItemIndex={props.menuItemIndex}
+            setMenuItemIndex={props.setMenuItemIndex}
+          />
+        ))}
       </div>
     </div>
   );
