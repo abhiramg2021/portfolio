@@ -8,9 +8,19 @@ export const InfoIcons = (props) => {
   return (
     <div className="reveal-down flex w-full flex-row-reverse items-center justify-between">
       <div className="flex space-x-5">
-        <FiMail className=" small-icon" />
-        <FiGithub className="small-icon" />
-        <FiFileText className="small-icon" />
+        <a href="mailto:abhiramg2021@gmail.com" target="_blank">
+          <FiMail className=" small-icon" />
+        </a>
+        <a href="https://github.com/abhiramg2021" target="_blank">
+          <FiGithub className="small-icon" />
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1A7SXUe7HPkiaMchXo6b_PO-57JDKBOU5/view?usp=sharing"
+          target="_blank"
+        >
+          <FiFileText className="small-icon" />
+        </a>
       </div>
 
       <div id="home">
