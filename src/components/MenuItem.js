@@ -1,7 +1,6 @@
 import "../style/index.css";
 
 export const MenuItem = (props) => {
-  console.log(props.id == props.menuItemIndex);
   return (
     <div>
       <span

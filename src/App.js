@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { InfoIcons } from "./components/InfoIcons";
 import { Job } from "./components/Job";
 import { Landing } from "./components/Landing";
@@ -9,7 +9,7 @@ import "./style/index.css";
 
 function App() {
   const [menuToggle, setMenuToggle] = useState(true);
-  const [menuItemIndex, setMenuItemIndex] = useState(-1);
+  const [menuItemIndex, setMenuItemIndex] = useState(-2);
   return (
     <div className="flex justify-center bg-gray-100">
       <div className="relative h-screen w-screen max-w-screen-xl overflow-x-hidden">
@@ -24,7 +24,7 @@ function App() {
                   <Job menuItemIndex={menuItemIndex} />
                 )
               ) : (
-                <Landing />
+                <Landing menuItemIndex={menuItemIndex} />
               )}
             </div>
             <div className=" lg:w-auto">
