@@ -5,19 +5,25 @@ export const Project = (props) => {
   const project = projects[props.menuItemIndex];
   return (
     <div id="card" className="reveal-right p-10">
-      <h1 className="pb-3 text-5xl font-bold">{project.title}</h1>
-
-      <div className="lightbar-left m-0 pl-5">
-        <p className="pb-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-
-        <Link />
-        <Link />
+      <div className="pb-5">
+        <h1 className=" pb-1 text-5xl font-bold">{project.title}</h1>
+        <div className="flex space-x-2">
+          {project.tags.map((text) => (
+            <div className="w-fit rounded-lg bg-gray-300 px-2 py-1  italic">
+              {text}
+            </div>
+          ))}
+        </div>
       </div>
+
+      <div className="mb-5 flex flex-col space-y-5">
+        {project.description.map((text) => (
+          <p className="lightbar-left">{text}</p>
+        ))}
+      </div>
+
+      <Link />
+      <Link />
     </div>
   );
 };

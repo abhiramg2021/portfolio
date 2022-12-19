@@ -3,7 +3,7 @@ import "./../style/index.css";
 
 export const InfoIcons = (props) => {
   const randomHSL = () => {
-    return `hsla(${~~(360 * Math.random())},70%,70%,0.8)`;
+    return `hsl(${~~(360 * Math.random())},70%,70%)`;
   };
   return (
     <div className="reveal-down flex w-full flex-row-reverse items-center justify-between">

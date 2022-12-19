@@ -177,7 +177,7 @@
 }
 
 .lightbar-left {
-  @apply relative;
+  @apply relative pl-5;
 }
 
 .lightbar-left::after {
