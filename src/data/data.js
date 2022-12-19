@@ -3,7 +3,7 @@ export const projects = [
     title: "Cotion",
     tags: ["react.js", "flask"],
     description: [
-      "I sought out to find a website that could automate the process of uploading my Canvas Assignments to Notion, my task management software, and I stumbled upon Edutools for Notion. Unfortunately, no matter how long I tinkered with the website, it did not seem to work for me. So I put together my own Canvas To Notion workflow called Cotion.",
+      "I sought out to find a website that could automate the process of uploading Canvas assignments to Notion, and I stumbled upon Edutools for Notion. Unfortunately, no matter how long I tinkered with the website, it wouldn't work. So I wrote my own Canvas To Notion tool.",
     ],
     site: "https://cotion.herokuapp.com",
     code: "https://github.com/Cotion-App/",
@@ -20,7 +20,7 @@ export const projects = [
     title: "Drivetrain Generator",
     tags: ["Onshape", "automation"],
     description: [
-      "In FRC Robotics, one of the building blocks of a robot is a drivebase (chasis) that allows the robot to move. One of the most popular designs, the WCD, differs from team to team only by dimensions. Noticing this, I created a tool that automated the design process that once took 45 minutes, to nothing more than 20 seconds and a couple clicks.",
+      "In FRC Robotics, one of the building blocks of a robot is a drivebase (chasis). One of the most popular drivebase designs, the WCD, differs from team to team only by a few variables(ex. width, height, # of wheels, etc. ). Noticing this, I created a tool that automated the design process that once took 45 minutes, to nothing more than 20 seconds and a couple clicks.",
     ],
     site: "https://cad.onshape.com/documents/96d32fd4fe5341563a402ecd/v/67d9e6b8eabf48e030f6ffff/e/1d3de11ced3d680525700399",
   },
@@ -32,9 +32,8 @@ export const jobs = [
     duration: "June 2022 - Aug 2022",
     title: "Backend Developer Intern",
     description: [
-      "Resolved a security incident that exposed passwords at runtime by implementing a secure passwords pattern in Kubernetes.",
-      "Implemented a Redis cache, resulting in a 99% decrease in API response time.",
-      "Developed a feature in Java Spring that migrated on-site databases to an Azure database to reduce maintenance and security overhead.",
+      "Whenever we buy a car from a dealership, we take out a loan from the bank. The dealerships are no different. To buy cars to fill their inventory, they take loans from banks just like us. Datascan is a company that creates tools for these banks to monitor the wholesale lending life cycle. During the summer, I worked on such tools in the backend.",
+      "First, I resolved a security incident that exposed passwords at runtime by implementing a secure passwords pattern in Kubernetes. Then, I implemented a Redis cache, which resulted in a 99% decrease in API response time. Lastly, I developed a feature in Java Spring that migrated on-site databases to an Azure database to reduce maintenance and security overhead.",
     ],
   },
   {
@@ -42,8 +41,9 @@ export const jobs = [
     title: "Undergraduate Researcher",
     duration: "Jan 2022 - April 2022",
     description: [
-      "Derived a Linear Variant of the Intelligent Driver Model to simplify retrofitting data.",
-      "Implemented a Real Time Kalman Filter to retrofit driver data to the Linear Intelligent Driver Model.",
+      "Autonomous & Connected Transportation Laboratory, or ACT Lab for short is a research lab directed by Dr. Srinivas Peeta that addresses problems broadly in transportation and infrastructure systems.",
+      "I worked on the Retrofitting data team, where our goal was to model driver data through commonly used car following models.",
+      "One of the popular models that we were using was the Intelligent Driver Model. However, the model itself was non linear, so I derived a Linear Variant to simplify the retrofitting process. As for the actual process of retrofitting, I used a Real Time Kalman Filter.",
     ],
   },
   {
@@ -51,9 +51,9 @@ export const jobs = [
     title: "Automation Engineering Intern",
     duration: "June 2021 - Aug 2021",
     description: [
-      "Refined the Perl, a medicinal packaging device that split large spools of pouches into bundles while using Computer Vision to verify the contents of each pouch.",
-      "Conducted 6 weeks worth of testing, and then interpreted the results in Excel using correlation matrices.",
-      "Designed an add-on kit in Onshape to control feed rate of large spools into the Perl to reduce improper bundling.",
+      "We all know the classic orange CVS bottle. Have you ever thought about how your pharamcist goes about getting your order? Well if you thought that they filled each bottle as an order came in, they would never be able to keep up with the orders, or even worse, they could get an order wrong. Instead, they use a machines built by Parata to packages pills automatically.",
+      "I worked on a machine that was more suited for a long term care facility called the Parata Perl. Over the summer, my main goal was to address find new bugs, and characterize them, so that the engineering team could resolve them.",
+      "I conducted 6 weeks worth of testing, and then interpreted the results in Excel using correlation matrices. Then, I designed an add-on kit in Onshape to control feed rate of large spools into the Perl to reduce improper bundling.",
     ],
   },
 ];
