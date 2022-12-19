@@ -1,7 +1,7 @@
 /* landing animation */
 .fade-up {
   @apply relative translate-y-10 opacity-0;
-  animation: fade-up 1s linear 1.5s forwards;
+  animation: fade-up 1s ease-in-out 1.5s forwards;
 }
 
 @keyframes fade-up {
@@ -12,7 +12,7 @@
 
 .center-sig {
   @apply translate-x-1/4;
-  animation: center-sig 1s linear 1.5s forwards;
+  animation: center-sig 1s ease-in-out 1.5s forwards;
 }
 
 @keyframes center-sig {
@@ -25,7 +25,7 @@
 
 .fade-down {
   @apply relative -translate-y-10 opacity-0;
-  animation: fade-down 1s linear 1.5s forwards;
+  animation: fade-down 1s ease-in-out 1.5s forwards;
 }
 
 @keyframes fade-down {
@@ -36,7 +36,7 @@
 
 .fade-left {
   @apply relative translate-x-10 opacity-0;
-  animation: fade-left 1s linear 1.5s forwards;
+  animation: fade-left 1s ease-in-out 1.5s forwards;
 }
 
 @keyframes fade-left {

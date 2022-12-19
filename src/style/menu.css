@@ -7,7 +7,7 @@
   content: "";
   animation-name: menu-swap;
   animation-duration: 1s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-direction: forwards;
   @apply absolute top-0 h-full w-full origin-bottom-left scale-x-0 bg-gray-100;

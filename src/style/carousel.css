@@ -1,6 +1,6 @@
 .fade-right {
   @apply relative -translate-x-10 opacity-0;
-  animation: fade-right 1s linear 0s forwards;
+  animation: fade-right 1s ease-in-out 0s forwards;
 }
 
 @keyframes fade-right {
