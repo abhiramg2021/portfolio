@@ -22,8 +22,8 @@ export const Project = (props) => {
         ))}
       </div>
 
-      <Link />
-      <Link />
+      {project.site ? <Link text="View Site" link={project.site} /> : ""}
+      {project.code ? <Link text="Source Code" link={project.code} /> : ""}
     </div>
   );
 };
