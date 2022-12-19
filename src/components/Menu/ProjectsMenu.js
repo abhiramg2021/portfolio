@@ -17,7 +17,9 @@ export const ProjectsMenu = (props) => {
 
             setTimeout(() => {
               props.setMenuToggle(false);
-              props.setMenuItemIndex(-1);
+              if (props.menuItemIndex >= 0) {
+                props.setMenuItemIndex(-1);
+              }
             }, 300);
           }}
         />

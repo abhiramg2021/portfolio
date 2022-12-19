@@ -17,7 +17,9 @@ export const WorkMenu = (props) => {
             element.classList.add("menu");
             setTimeout(() => {
               props.setMenuToggle(true);
-              props.setMenuItemIndex(-1);
+              if (props.menuItemIndex >= 0) {
+                props.setMenuItemIndex(-1);
+              }
             }, 300);
           }}
         />
