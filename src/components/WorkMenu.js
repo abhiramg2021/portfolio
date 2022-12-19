@@ -23,7 +23,7 @@ export const WorkMenu = (props) => {
         />
       </div>
 
-      <div className="flex flex-col space-y-3 border-l-8 border-red-300 p-5">
+      <div className="lightbar-left flex flex-col space-y-3 p-5">
         {jobs.map((entry, id) => (
           <MenuItem
             key={id}

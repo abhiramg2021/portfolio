@@ -6,7 +6,7 @@ export const Project = (props) => {
     <div className="p-10">
       <h1 className="text-5xl font-bold">{project.title}</h1>
 
-      <div className="m-0 border-l-8 pl-5">
+      <div className="lightbar m-0 border-l-8 pl-5">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

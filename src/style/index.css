@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-
+@import "./constants.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,6 +28,10 @@
   @apply transition cursor-pointer hover:scale-125 hover:text-red-400;
 }
 
+.icon:hover {
+  color: var(--highlight);
+}
+
 .small-icon {
   @apply icon text-xl;
 }
@@ -37,7 +41,7 @@
 }
 
 .large-icon {
-  @apply icon text-4xl;
+  @apply transition cursor-pointer text-4xl hover:scale-125;
 }
 
 .wipe-underline-animation {
@@ -46,7 +50,7 @@
 
 .wipe-underline-animation::after {
   content: "";
-  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-0  bg-red-400 duration-500;
+  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-0  rounded-full bg-black duration-500;
 }
 
 .wipe-underline-animation:hover::after {
@@ -59,7 +63,7 @@
 
 .wipe-underline-highlight::after {
   content: "";
-  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100  bg-red-400 duration-500;
+  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100  rounded-full bg-black duration-500;
 }
 
 .anim {
@@ -169,4 +173,35 @@
   100% {
     @apply translate-x-0;
   }
+}
+
+.splash {
+  @apply relative;
+}
+.splash::after {
+  content: "";
+  animation-name: splashes;
+  animation-duration: 2s;
+  animation-delay: 0;
+  background-color: var(--highlight);
+  @apply transition absolute top-0 h-[120%] w-[120%] scale-0 cursor-pointer rounded-full;
+}
+
+@keyframes splashes {
+  99% {
+    @apply scale-[700];
+  }
+  100% {
+    @apply bg-inherit scale-0;
+  }
+}
+
+.lightbar-left {
+  @apply relative;
+}
+
+.lightbar-left::after {
+  content: "";
+  background-color: var(--highlight);
+  @apply absolute left-0 top-0 h-full w-2 rounded-full;
 }

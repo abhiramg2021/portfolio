@@ -1,7 +1,10 @@
 import { FiGithub, FiMail, FiFileText, FiHome } from "react-icons/fi";
 import "./../style/index.css";
 
-export const InfoIcons = (props) => {
+export const InfoIcons = () => {
+  const randomHSL = () => {
+    return `hsla(${~~(360 * Math.random())},70%,70%,0.8)`;
+  };
   return (
     <div className="reveal-down flex w-full flex-row-reverse items-center justify-between">
       <div className="flex space-x-5">
@@ -10,10 +13,22 @@ export const InfoIcons = (props) => {
         <FiFileText className="small-icon" />
       </div>
 
-      <FiHome
-        className="large-icon"
-        onClick={() => props.setMenuItemIndex(-1)}
-      />
+      <div id="home">
+        <FiHome
+          className="large-icon"
+          onClick={() => {
+            var r = document.getElementById("root");
+            var next = randomHSL();
+            r.style.setProperty("--highlight", next);
+
+            const element = document.getElementById("home");
+            element.classList.remove("splash");
+            void element.offsetWidth;
+            element.classList.add("splash");
+            props.setMenuItemIndex(-1);
+          }}
+        />
+      </div>
       {/* replace later with something more cool */}
     </div>
   );
