@@ -3,10 +3,10 @@ import "../style/index.css";
 
 export const Landing = () => {
   return (
-    <div>
+    <div className="offset flex flex-col items-start">
       <Signature />
 
-      <div className="reveal ">
+      <div className="reveal">
         <div className="m-0 flex flex-col space-y-5 border-l-8 border-red-300 pl-5">
           <p>
             That's my name. Lorem ipsum dolor sit amet, consectetur adipiscing

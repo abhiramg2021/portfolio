@@ -3,7 +3,7 @@ import "./../style/index.css";
 
 export const InfoIcons = (props) => {
   return (
-    <div className="reveal flex w-full flex-row-reverse items-center justify-between">
+    <div className="reveal-down flex w-full flex-row-reverse items-center justify-between">
       <div className="flex space-x-5">
         <FiMail className=" small-icon" />
         <FiGithub className="small-icon" />

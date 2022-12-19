@@ -128,3 +128,45 @@
     @apply translate-y-0 opacity-100;
   }
 }
+
+.reveal-down {
+  @apply relative -translate-y-10 opacity-0;
+  animation-name: fade-down;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-down {
+  100% {
+    @apply translate-y-0 opacity-100;
+  }
+}
+
+.reveal-left {
+  @apply relative translate-x-10 opacity-0;
+  animation-name: fade-left;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-left {
+  100% {
+    @apply translate-x-0 opacity-100;
+  }
+}
+
+.offset {
+  @apply translate-x-1/4;
+  animation-name: move-left;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-left {
+  100% {
+    @apply translate-x-0;
+  }
+}
