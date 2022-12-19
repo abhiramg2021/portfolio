@@ -11,7 +11,18 @@ function App() {
   const [menuToggle, setMenuToggle] = useState(true);
   const [menuItemIndex, setMenuItemIndex] = useState(-2);
   return (
-    <div className="flex justify-center overflow-hidden bg-gray-100">
+    <div
+      id="app"
+      className="flex justify-center overflow-hidden bg-gray-100"
+      onMouseOver={() => {
+        const element = document.getElementById("app");
+        element.classList.remove("lost-focus");
+      }}
+      onMouseLeave={() => {
+        const element = document.getElementById("app");
+        element.classList.add("lost-focus");
+      }}
+    >
       <div className="relative h-screen w-screen max-w-screen-xl">
         <div className="p-10">
           <IconBar
