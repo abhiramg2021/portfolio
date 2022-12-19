@@ -1,11 +1,11 @@
-import "../style/index.css";
+import "../../style/index.css";
 
 export const MenuItem = (props) => {
   return (
     <div>
       <span
         className={`wipe-underline-${
-          props.id == props.menuItemIndex ? "highlight" : "animation"
+          props.id === props.menuItemIndex ? "highlight" : "animation"
         } cursor-pointer`}
         onClick={() => {
           const element = document.getElementById("card");

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { InfoIcons } from "./components/InfoIcons";
+import { useState } from "react";
+import { IconBar } from "./components/IconBar";
 import { Job } from "./components/Job";
 import { Landing } from "./components/Landing";
-import { Menu } from "./components/Menu";
+import { Menu } from "./components/Menu/Menu";
 import { Project } from "./components/Project";
 
 import "./style/index.css";
@@ -14,7 +14,7 @@ function App() {
     <div className="flex justify-center overflow-hidden bg-gray-100">
       <div className="relative h-screen w-screen max-w-screen-xl">
         <div className="p-10">
-          <InfoIcons setMenuItemIndex={setMenuItemIndex} />
+          <IconBar setMenuItemIndex={setMenuItemIndex} />
           <div className="flex-no-wrap d flex flex-wrap items-start justify-between p-10 lg:px-24">
             <div className="mb-10 lg:w-2/3">
               {menuItemIndex >= 0 ? (
@@ -27,7 +27,7 @@ function App() {
                 <Landing menuItemIndex={menuItemIndex} />
               )}
             </div>
-            <div className=" lg:w-auto">
+            <div className="lg:w-auto">
               <Menu
                 menuItemIndex={menuItemIndex}
                 setMenuItemIndex={setMenuItemIndex}

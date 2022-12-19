@@ -5,7 +5,6 @@ export const projects = [
     description: [
       "I sought out to find a website that could automate the process of uploading Canvas assignments to Notion, and I stumbled upon Edutools for Notion. Unfortunately, no matter how long I tinkered with the website, it wouldn't work. So I wrote my own Canvas To Notion tool.",
     ],
-    site: "https://cotion.herokuapp.com",
     code: "https://github.com/Cotion-App/",
   },
   {

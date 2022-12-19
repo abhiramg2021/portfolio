@@ -1,34 +1,34 @@
-import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 import { MenuItem } from "./MenuItem";
-import { jobs } from "../data/data";
-
-export const WorkMenu = (props) => {
+import { FiChevronsRight } from "react-icons/fi";
+import "../../style/index.css";
+import { projects } from "../../data/data";
+export const ProjectsMenu = (props) => {
   return (
     <div>
-      <div className="flex items-center justify-end space-x-5">
-        <h2 className="text-3xl font-bold">Experience</h2>
-
+      <div className="flex items-center space-x-5">
+        <h2 className="text-3xl font-bold">Projects</h2>
         <FiChevronsRight
-          className="chevrons hover:translate-x-1"
+          className="chevrons icon hover:translate-x-1"
           onClick={() => {
             const element = document.getElementById("menu");
             element.classList.remove("anim");
             void element.offsetWidth; // forces browser to redraw
             element.classList.add("anim");
+
             setTimeout(() => {
-              props.setMenuToggle(true);
+              props.setMenuToggle(false);
               props.setMenuItemIndex(-1);
             }, 300);
           }}
         />
       </div>
 
-      <div className="lightbar-left flex flex-col space-y-3 p-5">
-        {jobs.map((entry, id) => (
+      <div className="lightbar-left flex flex-col space-y-3 border-red-300 p-5">
+        {projects.map((entry, id) => (
           <MenuItem
             key={id}
             id={id}
-            text={entry.company}
+            text={entry.title}
             menuItemIndex={props.menuItemIndex}
             setMenuItemIndex={props.setMenuItemIndex}
           />

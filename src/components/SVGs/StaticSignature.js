@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const StaticSignature = () => {
   return (
     <div className="Signature flex flex-wrap items-center justify-center space-x-5">
