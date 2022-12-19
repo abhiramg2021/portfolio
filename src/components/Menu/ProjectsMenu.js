@@ -11,9 +11,9 @@ export const ProjectsMenu = (props) => {
           className="chevrons icon hover:translate-x-1"
           onClick={() => {
             const element = document.getElementById("menu");
-            element.classList.remove("anim");
+            element.classList.remove("menu");
             void element.offsetWidth; // forces browser to redraw
-            element.classList.add("anim");
+            element.classList.add("menu");
 
             setTimeout(() => {
               props.setMenuToggle(false);
@@ -23,7 +23,7 @@ export const ProjectsMenu = (props) => {
         />
       </div>
 
-      <div className="lightbar-left flex flex-col space-y-3 border-red-300 p-5">
+      <div className="lightbar flex flex-col space-y-3 border-red-300 p-5">
         {projects.map((entry, id) => (
           <MenuItem
             key={id}

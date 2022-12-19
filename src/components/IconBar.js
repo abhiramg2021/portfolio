@@ -6,7 +6,7 @@ export const IconBar = (props) => {
     return `hsl(${~~(360 * Math.random())},70%,70%)`;
   };
   return (
-    <div className="reveal-down flex w-full flex-row-reverse items-center justify-between">
+    <div className="fade-down flex w-full flex-row-reverse items-center justify-between">
       <div className="flex space-x-5">
         <a
           href="mailto:abhiramg2021@gmail.com"

@@ -12,9 +12,9 @@ export const WorkMenu = (props) => {
           className="chevrons hover:translate-x-1"
           onClick={() => {
             const element = document.getElementById("menu");
-            element.classList.remove("anim");
+            element.classList.remove("menu");
             void element.offsetWidth; // forces browser to redraw
-            element.classList.add("anim");
+            element.classList.add("menu");
             setTimeout(() => {
               props.setMenuToggle(true);
               props.setMenuItemIndex(-1);
@@ -23,7 +23,7 @@ export const WorkMenu = (props) => {
         />
       </div>
 
-      <div className="lightbar-left flex flex-col space-y-3 p-5">
+      <div className="lightbar flex flex-col space-y-3 p-5">
         {jobs.map((entry, id) => (
           <MenuItem
             key={id}

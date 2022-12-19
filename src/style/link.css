@@ -1,0 +1,13 @@
+.link {
+  @apply relative;
+}
+
+.link::after {
+  content: "";
+  background-color: var(--highlight);
+  @apply transition absolute left-0 top-0 h-full w-full origin-bottom-left scale-x-0 rounded-lg;
+}
+
+.link:hover::after {
+  @apply scale-x-100;
+}
