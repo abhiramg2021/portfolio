@@ -25,7 +25,7 @@
 }
 
 .icon {
-  @apply transition cursor-pointer hover:scale-125 hover:text-red-700;
+  @apply transition cursor-pointer hover:scale-125 hover:text-red-400;
 }
 
 .small-icon {
@@ -46,7 +46,7 @@
 
 .wipe-underline-animation::after {
   content: "";
-  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-0 bg-red-400 duration-500;
+  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-0  bg-red-400 duration-500;
 }
 
 .wipe-underline-animation:hover::after {
@@ -59,7 +59,7 @@
 
 .wipe-underline-highlight::after {
   content: "";
-  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100 bg-red-400 duration-500;
+  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100  bg-red-400 duration-500;
 }
 
 .anim {
@@ -82,5 +82,33 @@
   }
   75% {
     @apply scale-x-100;
+  }
+}
+
+.letters {
+  animation-fill-mode: forwards;
+  stroke-opacity: 0;
+  stroke: #000000;
+}
+
+#letter-i {
+  animation: fade 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fade {
+  to {
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes sign {
+  1% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
   }
 }

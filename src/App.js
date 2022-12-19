@@ -14,7 +14,7 @@ function App() {
     <div className="bg-gray-50 relative h-screen w-screen overflow-x-hidden">
       <div className="p-10">
         <InfoIcons setMenuItemIndex={setMenuItemIndex} />
-        <div className="flex-no-wrap flex flex-wrap items-start justify-between p-10 lg:px-24">
+        <div className="flex-no-wrap d flex flex-wrap items-start justify-between p-10 lg:px-24">
           <div className="mb-10 lg:w-2/3">
             {menuItemIndex >= 0 ? (
               menuToggle ? (

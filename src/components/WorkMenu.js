@@ -9,7 +9,7 @@ export const WorkMenu = (props) => {
         <h2 className="text-3xl font-bold">Experience</h2>
 
         <FiChevronsRight
-          className="chevrons hover:-translate-x-1"
+          className="chevrons hover:translate-x-1"
           onClick={() => {
             const element = document.getElementById("menu");
             element.classList.remove("anim");
@@ -23,7 +23,7 @@ export const WorkMenu = (props) => {
         />
       </div>
 
-      <div className="flex flex-col items-end space-y-3 border-l-8 p-5">
+      <div className="flex flex-col space-y-3 border-l-8 border-red-300 p-5">
         {jobs.map((entry, id) => (
           <MenuItem
             key={id}
