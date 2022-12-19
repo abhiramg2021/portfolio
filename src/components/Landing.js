@@ -5,7 +5,7 @@ import "../style/index.css";
 export const Landing = (props) => {
   if (props.menuItemIndex == -1) {
     return (
-      <div className="reveal flex flex-col items-start">
+      <div id="card" className="reveal-right flex flex-col items-start">
         <StaticSignature />
         <div className="">
           <div className="lightbar-left flex flex-col space-y-5 pl-5">
@@ -27,7 +27,7 @@ export const Landing = (props) => {
     );
   } else {
     return (
-      <div className="offset flex flex-col items-start">
+      <div id="card" className="offset flex flex-col items-start">
         <Signature />
         <div className="reveal">
           <div className="lightbar-left m-0 flex flex-col space-y-5  pl-5">

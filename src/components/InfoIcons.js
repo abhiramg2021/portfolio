@@ -1,7 +1,7 @@
 import { FiGithub, FiMail, FiFileText, FiHome } from "react-icons/fi";
 import "./../style/index.css";
 
-export const InfoIcons = () => {
+export const InfoIcons = (props) => {
   const randomHSL = () => {
     return `hsla(${~~(360 * Math.random())},70%,70%,0.8)`;
   };

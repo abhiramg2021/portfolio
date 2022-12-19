@@ -4,26 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.borderLeft {
-  border-left: 20px solid;
-  bottom: 75%;
-}
-
-.borderTop {
-  border-top: 20px solid;
-  right: 85%;
-}
-
-.borderRight {
-  border-right: 20px solid;
-  top: 75%;
-}
-
-.borderBottom {
-  border-bottom: 20px solid;
-  left: 85%;
-}
-
 .icon {
   @apply transition cursor-pointer hover:scale-125 hover:text-red-400;
 }
@@ -50,7 +30,7 @@
 
 .wipe-underline-animation::after {
   content: "";
-  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-0  rounded-full bg-black duration-500;
+  @apply transition -bottom-1 absolute left-0 h-[4px] w-full origin-bottom-right scale-x-0  rounded-full bg-black duration-500;
 }
 
 .wipe-underline-animation:hover::after {
@@ -63,7 +43,7 @@
 
 .wipe-underline-highlight::after {
   content: "";
-  @apply transition absolute bottom-0 left-0 h-[4px] w-full origin-bottom-right scale-x-100  rounded-full bg-black duration-500;
+  @apply transition -bottom-1 absolute left-0 h-[4px] w-full origin-bottom-right scale-x-100  rounded-full bg-black duration-500;
 }
 
 .anim {
@@ -73,7 +53,7 @@
 .anim::after {
   content: "";
   animation-name: swap-forward;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-direction: forwards;
@@ -204,4 +184,31 @@
   content: "";
   background-color: var(--highlight);
   @apply absolute left-0 top-0 h-full w-2 rounded-full;
+}
+
+.wipe-block {
+  @apply relative;
+}
+
+.wipe-block::after {
+  content: "";
+  background-color: var(--highlight);
+  @apply transition absolute left-0 top-0 h-full w-full origin-bottom-left scale-x-0 rounded-lg;
+}
+
+.wipe-block:hover::after {
+  @apply scale-x-100;
+}
+
+.reveal-right {
+  @apply relative -translate-x-10 opacity-0;
+  animation-name: fade-right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-right {
+  100% {
+    @apply translate-x-0 opacity-100;
+  }
 }

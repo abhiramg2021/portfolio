@@ -6,8 +6,16 @@ export const MenuItem = (props) => {
       <span
         className={`wipe-underline-${
           props.id == props.menuItemIndex ? "highlight" : "animation"
-        } cursor-pointer pb-1`}
-        onClick={() => props.setMenuItemIndex(props.id)}
+        } cursor-pointer`}
+        onClick={() => {
+          const element = document.getElementById("card");
+          if (element) {
+            element.classList.remove("reveal-right");
+            void element.offsetWidth; // forces browser to redraw
+            element.classList.add("reveal-right");
+          }
+          props.setMenuItemIndex(props.id);
+        }}
       >
         {props.text}
       </span>
