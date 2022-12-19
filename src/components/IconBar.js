@@ -44,7 +44,9 @@ export const IconBar = (props) => {
             element.classList.remove("splash");
             void element.offsetWidth;
             element.classList.add("splash");
-            props.setMenuItemIndex(-1);
+            if (props.menuItemIndex >= 0) {
+              props.setMenuItemIndex(-1);
+            }
           }}
         >
           AG
