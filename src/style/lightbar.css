@@ -1,0 +1,9 @@
+.lightbar {
+  @apply relative pl-5;
+}
+
+.lightbar::after {
+  content: "";
+  background-color: var(--highlight);
+  @apply absolute left-0 top-0 h-full w-2 rounded-full;
+}

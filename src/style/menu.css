@@ -1,0 +1,47 @@
+/* MENU CSS */
+.menu {
+  @apply relative;
+}
+
+.menu::after {
+  content: "";
+  animation-name: menu-swap;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: forwards;
+  @apply absolute top-0 h-full w-full origin-bottom-left scale-x-0 bg-gray-100;
+}
+
+@keyframes menu-swap {
+  25% {
+    @apply scale-x-100;
+  }
+  75% {
+    @apply scale-x-100;
+  }
+}
+
+/* MENU-ITEMS CSS */
+
+.wipe-underline-animation {
+  @apply relative;
+}
+
+.wipe-underline-animation::after {
+  content: "";
+  @apply transition -bottom-1 absolute left-0 h-[4px] w-full origin-bottom-right scale-x-0  rounded-full bg-black duration-500;
+}
+
+.wipe-underline-animation:hover::after {
+  @apply origin-bottom-left scale-x-100;
+}
+
+.wipe-underline-highlight {
+  @apply relative;
+}
+
+.wipe-underline-highlight::after {
+  content: "";
+  @apply transition -bottom-1 absolute left-0 h-[4px] w-full origin-bottom-right scale-x-100  rounded-full bg-black duration-500;
+}

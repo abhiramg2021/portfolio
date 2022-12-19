@@ -1,57 +1,57 @@
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import { Route, Routes } from "react-router-dom";
-import { MarkdownProject } from "./pages/MarkdownProject";
-import { MarkdownPosition } from "./pages/MarkdownPosition";
-import { Error } from "./pages/Error";
-const projects = require("./projects.json");
-const jobs = require("./jobs.json");
+import { useState } from "react";
+import { IconBar } from "./components/IconBar";
+import { Job } from "./components/Job";
+import { Landing } from "./components/Landing";
+import { Menu } from "./components/Menu/Menu";
+import { Project } from "./components/Project";
+
+import "./style/index.css";
 
 function App() {
-  const renderProjectBlogs = () => {
-    const blogs = Object.keys(projects);
-    return blogs.map((project) => {
-      return (
-        <Route
-          path={`/${project.replace(" ", "")}`}
-          element={<MarkdownProject project={project} />}
-        />
-      );
-    });
-  };
-
-  const renderJobBlogs = () => {
-    const blogs = Object.keys(jobs);
-    return blogs.map((job) => {
-      return (
-        <Route
-          path={`/${job.replace(" ", "")}`}
-          element={<MarkdownPosition position={job} />}
-        />
-      );
-    });
-  };
-
+  const [menuToggle, setMenuToggle] = useState(true);
+  const [menuItemIndex, setMenuItemIndex] = useState(-2);
   return (
-    <div className="App w-screen overflow-hidden">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Home />
-              <About />
-              <Projects />
-              <Contact />
+    <div
+      id="app"
+      className="flex justify-center bg-gray-100"
+      onMouseOver={() => {
+        const element = document.getElementById("app");
+        element.classList.remove("lost-focus");
+      }}
+      onMouseLeave={() => {
+        const element = document.getElementById("app");
+        element.classList.add("lost-focus");
+      }}
+    >
+      <div className="relative h-screen w-screen max-w-screen-xl">
+        <div className="p-5 lg:p-10">
+          <IconBar
+            setMenuItemIndex={setMenuItemIndex}
+            menuItemIndex={menuItemIndex}
+          />
+          <div className="flex-no-wrap flex flex-wrap items-start justify-between p-2 lg:py-10  lg:px-24">
+            <div className="mb-10 lg:w-2/3">
+              {menuItemIndex >= 0 ? (
+                menuToggle ? (
+                  <Project menuItemIndex={menuItemIndex} />
+                ) : (
+                  <Job menuItemIndex={menuItemIndex} />
+                )
+              ) : (
+                <Landing menuItemIndex={menuItemIndex} />
+              )}
             </div>
-          }
-        />
-        {renderProjectBlogs()}
-        {renderJobBlogs()}
-        <Route path="*" element={<Error />} />
-      </Routes>
+            <div className="lg:w-auto">
+              <Menu
+                menuItemIndex={menuItemIndex}
+                setMenuItemIndex={setMenuItemIndex}
+                menuToggle={menuToggle}
+                setMenuToggle={setMenuToggle}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

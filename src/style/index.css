@@ -1,72 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-@import "./constants.css";
-@import "./landing-animation.css";
-@import "./pages.css";
+@import "./icons.css";
+@import "./signature.css";
+@import "./splash.css";
+@import "./landing.css";
+@import "./menu.css";
+@import "./link.css";
+@import "./lightbar.css";
+@import "./carousel.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.root,
+#root,
+#docs-root {
+  --highlight: lightblue;
 }
 
-section {
-  @apply relative min-h-screen;
-}
-
-h2 {
-  @apply pb-2 text-s font-bold text-black;
-}
-
-h3 {
-  @apply text-s font-bold text-gray;
-}
-
-p {
-  @apply pb-5;
-}
-
-a {
-  @apply transition italic duration-500;
-}
-
-a:hover {
-  @apply text-highlight;
-}
-
-.tag {
-  @apply rounded-md bg-black px-2 text-white;
-}
-
-.title {
-  @apply pt-5 text-center font-yellowtail text-m leading-none text-black;
-}
-
-.subtitle {
-  @apply text-center text-m font-bold leading-none text-black;
-}
-
-.content {
-  @apply relative z-10 flex flex-col items-center;
-}
-
-.wave {
-  @apply absolute;
-}
-.waves {
-  @apply absolute;
-}
-
-@media only screen and (max-width: 900px) {
-  .wave {
-    width: 900px;
-  }
+.lost-focus {
+  --highlight: lightgray;
 }
 
 @media only screen and (max-width: 600px) {
@@ -76,4 +28,8 @@ a:hover {
   #ghanta {
     width: 280px;
   }
+}
+
+#card {
+  @apply flex flex-col pt-5 lg:px-10;
 }

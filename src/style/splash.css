@@ -1,0 +1,18 @@
+.splash {
+  @apply relative;
+}
+.splash::after {
+  content: "";
+  animation: splashes 2s ease-in-out 0s;
+  background-color: var(--highlight);
+  @apply transition absolute top-0 h-[120%] w-[120%] scale-0 cursor-pointer rounded-full;
+}
+
+@keyframes splashes {
+  99% {
+    @apply scale-[700];
+  }
+  100% {
+    @apply bg-inherit scale-0;
+  }
+}

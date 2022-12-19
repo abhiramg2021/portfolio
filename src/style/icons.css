@@ -1,0 +1,26 @@
+.icon {
+  @apply transition cursor-pointer hover:scale-125 hover:text-red-400;
+}
+
+.icon:hover {
+  color: var(--highlight);
+}
+
+.small-icon {
+  @apply icon text-xl;
+}
+
+.chevrons {
+  @apply icon transition cursor-pointer text-4xl ease-in-out hover:scale-105;
+}
+
+.home-icon {
+  border-radius: 29% 71% 28% 72% / 68% 23% 77% 32%;
+  background-color: var(--highlight);
+  @apply transition h-[50px] w-[50px]
+      cursor-pointer;
+}
+
+.home-icon:hover {
+  @apply drop-shadow-2xl scale-125;
+}

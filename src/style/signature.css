@@ -1,0 +1,25 @@
+.letters {
+  animation-fill-mode: forwards;
+  stroke-opacity: 0;
+  stroke: #000000;
+}
+
+#letter-i {
+  animation: fade 0.7s ease-in-out 0.5s forwards;
+}
+
+@keyframes fade {
+  to {
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes sign {
+  1% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}

@@ -1,0 +1,48 @@
+/* landing animation */
+.fade-up {
+  @apply relative translate-y-10 opacity-0;
+  animation: fade-up 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes fade-up {
+  100% {
+    @apply translate-y-0 opacity-100;
+  }
+}
+
+@media (min-width: 1024px) {
+  .center-sig {
+    @apply translate-x-1/4;
+    animation: center-sig 1s ease-in-out 1.5s forwards;
+  }
+
+  @keyframes center-sig {
+    100% {
+      @apply translate-x-0;
+    }
+  }
+}
+
+/* iconbar */
+
+.fade-down {
+  @apply relative -translate-y-10 opacity-0;
+  animation: fade-down 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes fade-down {
+  100% {
+    @apply translate-y-0 opacity-100;
+  }
+}
+
+.fade-left {
+  @apply relative translate-x-10 opacity-0;
+  animation: fade-left 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes fade-left {
+  100% {
+    @apply translate-x-0 opacity-100;
+  }
+}
