@@ -3,7 +3,7 @@ import { WorkMenu } from "./WorkMenu";
 import "../style/index.css";
 export const Menu = (props) => {
   return (
-    <div id="menu">
+    <div id="menu" className="reveal">
       {props.menuToggle ? (
         <ProjectsMenu
           menuItemIndex={props.menuItemIndex}

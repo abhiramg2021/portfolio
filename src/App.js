@@ -11,7 +11,7 @@ function App() {
   const [menuToggle, setMenuToggle] = useState(true);
   const [menuItemIndex, setMenuItemIndex] = useState(-1);
   return (
-    <div className="bg-gray-50 relative h-screen w-screen overflow-x-hidden">
+    <div className="relative h-screen w-screen overflow-x-hidden bg-gray-100">
       <div className="p-10">
         <InfoIcons setMenuItemIndex={setMenuItemIndex} />
         <div className="flex-no-wrap d flex flex-wrap items-start justify-between p-10 lg:px-24">

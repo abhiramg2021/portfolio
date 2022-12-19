@@ -73,7 +73,7 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-direction: forwards;
-  @apply bg-gray-50 absolute top-0 h-full w-full origin-bottom-left scale-x-0;
+  @apply absolute top-0 h-full w-full origin-bottom-left scale-x-0 bg-gray-100;
 }
 
 @keyframes swap-forward {
@@ -84,6 +84,8 @@
     @apply scale-x-100;
   }
 }
+
+/* LANDING ANIMATION */
 
 .letters {
   animation-fill-mode: forwards;
@@ -110,5 +112,19 @@
   100% {
     stroke-dashoffset: 0;
     stroke-opacity: 1;
+  }
+}
+
+.reveal {
+  @apply relative translate-y-10 opacity-0;
+  animation-name: fade-up;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-up {
+  100% {
+    @apply translate-y-0 opacity-100;
   }
 }
