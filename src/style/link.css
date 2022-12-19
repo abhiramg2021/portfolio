@@ -1,5 +1,5 @@
 .link {
-  @apply relative;
+  @apply w-fit relative;
 }
 
 .link::after {

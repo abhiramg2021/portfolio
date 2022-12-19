@@ -31,5 +31,5 @@
 }
 
 #card {
-  @apply flex flex-col items-center pt-5 lg:px-10;
+  @apply flex flex-col pt-5 lg:px-10;
 }
