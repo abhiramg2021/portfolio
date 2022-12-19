@@ -6,10 +6,7 @@ export const Landing = (props) => {
   return (
     <div
       id="card"
-      className={
-        "flex flex-col items-start " +
-        (props.menuItemIndex === -1 ? "fade-right" : "center-sig")
-      }
+      className={props.menuItemIndex === -1 ? "fade-right" : "center-sig"}
     >
       {props.menuItemIndex === -1 ? <StaticSignature /> : <Signature />}
       <div className={props.menuItemIndex === -1 ? "" : "fade-up"}>

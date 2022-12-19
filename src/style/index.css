@@ -20,3 +20,16 @@
 .lost-focus {
   --highlight: lightgray;
 }
+
+@media only screen and (max-width: 600px) {
+  #abhiram {
+    width: 300px;
+  }
+  #ghanta {
+    width: 280px;
+  }
+}
+
+#card {
+  @apply flex flex-col items-start pt-5 lg:px-10;
+}

@@ -13,7 +13,7 @@ function App() {
   return (
     <div
       id="app"
-      className="flex justify-center overflow-hidden bg-gray-100"
+      className="flex justify-center bg-gray-100"
       onMouseOver={() => {
         const element = document.getElementById("app");
         element.classList.remove("lost-focus");
@@ -24,12 +24,12 @@ function App() {
       }}
     >
       <div className="relative h-screen w-screen max-w-screen-xl">
-        <div className="p-10">
+        <div className="p-5 lg:p-10">
           <IconBar
             setMenuItemIndex={setMenuItemIndex}
             menuItemIndex={menuItemIndex}
           />
-          <div className="flex-no-wrap d flex flex-wrap items-start justify-between p-10 lg:px-24">
+          <div className="flex-no-wrap flex flex-wrap items-start justify-between p-2 lg:py-10  lg:px-24">
             <div className="mb-10 lg:w-2/3">
               {menuItemIndex >= 0 ? (
                 menuToggle ? (

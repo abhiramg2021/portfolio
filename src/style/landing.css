@@ -10,14 +10,16 @@
   }
 }
 
-.center-sig {
-  @apply translate-x-1/4;
-  animation: center-sig 1s ease-in-out 1.5s forwards;
-}
+@media (min-width: 1024px) {
+  .center-sig {
+    @apply translate-x-1/4;
+    animation: center-sig 1s ease-in-out 1.5s forwards;
+  }
 
-@keyframes center-sig {
-  100% {
-    @apply translate-x-0;
+  @keyframes center-sig {
+    100% {
+      @apply translate-x-0;
+    }
   }
 }
 
