@@ -1,4 +1,4 @@
-import { FiGithub, FiMail, FiFileText, FiHome } from "react-icons/fi";
+import { FiGithub, FiMail, FiFileText } from "react-icons/fi";
 import "./../style/index.css";
 
 export const IconBar = (props) => {
@@ -33,8 +33,8 @@ export const IconBar = (props) => {
       </div>
 
       <div id="home">
-        <FiHome
-          className="large-icon"
+        <div
+          className="home-icon flex items-center justify-center font-serif text-xl text-white "
           onClick={() => {
             var r = document.getElementById("root");
             var next = randomHSL();
@@ -46,9 +46,10 @@ export const IconBar = (props) => {
             element.classList.add("splash");
             props.setMenuItemIndex(-1);
           }}
-        />
+        >
+          AG
+        </div>
       </div>
-      {/* replace later with something more cool */}
     </div>
   );
 };
