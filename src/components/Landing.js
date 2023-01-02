@@ -5,7 +5,6 @@ import "../style/index.css";
 export const Landing = (props) => {
   return (
     <div
-      id="card"
       className={
         "items-center " +
         (props.menuItemIndex === -1 ? "fade-right" : "center-sig")

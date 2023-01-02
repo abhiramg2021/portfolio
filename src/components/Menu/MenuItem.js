@@ -10,11 +10,11 @@ export const MenuItem = (props) => {
         onClick={() => {
           const element = document.getElementById("card");
           if (element) {
-            element.classList.remove("fade-right");
+            element.classList.remove("wipe");
             void element.offsetWidth; // forces browser to redraw
-            element.classList.add("fade-right");
+            element.classList.add("wipe");
           }
-          props.setMenuItemIndex(props.id);
+          setTimeout(() => props.setMenuItemIndex(props.id), 500);
         }}
       >
         {props.text}

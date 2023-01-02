@@ -4,7 +4,7 @@ import "../style/index.css";
 export const Project = (props) => {
   const project = projects[props.menuItemIndex];
   return (
-    <div id="card" className="fade-right">
+    <div className="pb-2">
       <div className="pb-5">
         <h1 className=" pb-1 text-5xl font-bold">{project.title}</h1>
         <div className="flex space-x-2">

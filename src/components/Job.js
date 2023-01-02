@@ -3,7 +3,7 @@ import "../style/index.css";
 export const Job = (props) => {
   const job = jobs[props.menuItemIndex];
   return (
-    <div id="card" className="fade-right">
+    <div>
       <div className="pb-5">
         <h1 className="text-5xl font-bold ">{job.company}</h1>
         <h2 className="text-xl italic">{job.title}</h2>
