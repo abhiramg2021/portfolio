@@ -1,11 +1,11 @@
 .link {
-  @apply w-fit relative;
+  @apply relative w-fit;
 }
 
 .link::after {
   content: "";
   background-color: var(--highlight);
-  @apply transition absolute left-0 top-0 h-full w-full origin-bottom-left scale-x-0 rounded-lg;
+  @apply absolute left-0 top-0 h-full w-full origin-bottom-left scale-x-0 rounded-lg opacity-90 transition;
 }
 
 .link:hover::after {
