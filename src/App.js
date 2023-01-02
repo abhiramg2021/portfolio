@@ -13,7 +13,7 @@ function App() {
   return (
     <div
       id="app"
-      className="flex justify-center bg-gray-100"
+      className="flex justify-center overflow-clip bg-gray-100"
       onMouseOver={() => {
         const element = document.getElementById("app");
         element.classList.remove("lost-focus");
