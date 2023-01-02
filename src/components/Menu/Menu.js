@@ -5,7 +5,7 @@ import { projects, jobs } from "../../data/data";
 export const Menu = (props) => {
   const items = props.menuToggle ? projects : jobs;
   return (
-    <div id="menu" className="fade-left">
+    <div id="menu" className="fade-left min-w-[225px]">
       <div className="mb-3 flex items-center space-x-5">
         <h2 className="text-3xl font-bold">
           {props.menuToggle ? "Projects" : "Experience"}
@@ -14,9 +14,9 @@ export const Menu = (props) => {
           className="chevrons icon hover:translate-x-1"
           onClick={() => {
             const element = document.getElementById("menu");
-            element.classList.remove("menu");
+            element.classList.remove("wipe");
             void element.offsetWidth; // forces browser to redraw
-            element.classList.add("menu");
+            element.classList.add("wipe");
 
             setTimeout(() => {
               props.setMenuToggle(!props.menuToggle);

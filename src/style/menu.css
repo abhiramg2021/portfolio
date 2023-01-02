@@ -1,9 +1,10 @@
 /* MENU CSS */
-.menu {
-  @apply relative;
+
+.wipe {
+  @apply relative overflow-x-clip;
 }
 
-.menu::after {
+.wipe::after {
   content: "";
   animation-name: menu-swap;
   animation-duration: 1s;
@@ -14,11 +15,12 @@
 }
 
 @keyframes menu-swap {
-  25% {
-    @apply scale-x-100;
+  50% {
+    @apply scale-x-150;
   }
-  75% {
-    @apply scale-x-100;
+
+  100% {
+    @apply translate-x-full scale-x-150;
   }
 }
 
@@ -30,7 +32,7 @@
 
 .wipe-underline-animation::after {
   content: "";
-  @apply transition -bottom-1 absolute left-0 h-[4px] w-full origin-bottom-right scale-x-0  rounded-full bg-black duration-500;
+  @apply absolute -bottom-1 left-0 h-[4px] w-full origin-bottom-right scale-x-0 rounded-full  bg-black transition duration-500;
 }
 
 .wipe-underline-animation:hover::after {
@@ -43,5 +45,5 @@
 
 .wipe-underline-highlight::after {
   content: "";
-  @apply transition -bottom-1 absolute left-0 h-[4px] w-full origin-bottom-right scale-x-100  rounded-full bg-black duration-500;
+  @apply absolute -bottom-1 left-0 h-[4px] w-full origin-bottom-right scale-x-100 rounded-full  bg-black transition duration-500;
 }

@@ -29,7 +29,7 @@ function App() {
             setMenuItemIndex={setMenuItemIndex}
             menuItemIndex={menuItemIndex}
           />
-          <div className="flex-no-wrap flex flex-wrap items-start justify-between p-2 lg:py-10  lg:px-24">
+          <div className="flex-no-wrap flex flex-wrap items-start justify-between   p-2 lg:py-10 lg:px-24">
             <div className="mb-10 lg:w-2/3">
               {menuItemIndex >= 0 ? (
                 menuToggle ? (
