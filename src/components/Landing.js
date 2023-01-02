@@ -17,7 +17,8 @@ export const Landing = (props) => {
             That's my name. Right now, I'm studying CS at Georgia Tech. For my
             GT CS nerds out there, my threads are Devices and Intelligence. Over
             the years, I have developed an interest for website design, app
-            development and computer vision. It's a growing list.
+            development and computer vision. It's a growing list. Click around
+            the site to learn more about me.
           </p>
         </div>
       </div>
