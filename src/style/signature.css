@@ -1,7 +1,13 @@
-.letters {
+#signature {
+  stroke: #000000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  @apply stroke-black stroke-[5px];
+}
+
+.landing {
   animation-fill-mode: forwards;
   stroke-opacity: 0;
-  stroke: #000000;
 }
 
 #letter-i {

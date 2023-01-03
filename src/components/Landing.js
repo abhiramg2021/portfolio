@@ -1,5 +1,4 @@
-import Signature from "../components/SVGs/Signature";
-import StaticSignature from "../components/SVGs/StaticSignature";
+import Signature from "./Signature";
 import "../style/index.css";
 
 export const Landing = (props) => {
@@ -10,7 +9,7 @@ export const Landing = (props) => {
         (props.menuItemIndex === -1 ? "fade-right" : "center-sig")
       }
     >
-      {props.menuItemIndex === -1 ? <StaticSignature /> : <Signature />}
+      <Signature menuItemIndex={props.menuItemIndex} />
       <div className={props.menuItemIndex === -1 ? "" : "fade-up"}>
         <div className="lightbar mt-5 flex flex-col space-y-5 pl-5">
           <p>
