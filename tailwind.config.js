@@ -4,6 +4,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  fontFamily: { yellowtail: ["Yellowtail", "cursive"] },
   plugins: [],
 };
